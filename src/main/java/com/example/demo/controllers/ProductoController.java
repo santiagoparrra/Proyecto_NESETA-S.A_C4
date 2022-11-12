@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,6 +25,12 @@ public class ProductoController {
     public List<ProductoModel> getAllProductos(){
         return productoService.getProductos();
     }
+
+    @GetMapping(path = "/{id}")
+    public Optional<ProductoModel> getProductoById(@PathVariable("id") String id){
+        return productoService.getpProductoById(id);
+    }
+
     @PostMapping()
     public ProductoModel saveProducto(@RequestBody ProductoModel producto){
         return productoService.saveProducto(producto);
