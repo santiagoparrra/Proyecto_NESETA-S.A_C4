@@ -19,4 +19,5 @@ public class FacturadorModel {
     private String correo;
     private String usuario;
     private String contraseña;
+    private String estado; //habilitado o deshabilitado 
 }
