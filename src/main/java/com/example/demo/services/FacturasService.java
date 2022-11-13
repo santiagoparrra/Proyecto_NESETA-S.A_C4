@@ -21,7 +21,7 @@ public class FacturasService {
     
     public List<FacturasModel> getFacturas() {
         List<FacturasModel> listaFacturas= facturasRepository.findAll();
-        listaFacturas.sort(Comparator.comparing(FacturasModel::getId_cliente));//revisar ::
+        listaFacturas.sort(Comparator.comparing(FacturasModel::getId));//revisar ::
         return listaFacturas;
     }
 

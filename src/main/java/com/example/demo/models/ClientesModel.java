@@ -15,6 +15,7 @@ import lombok.Setter;
 @Setter
 public class ClientesModel {
     @Id
+    private String id;
     private String nombre;
     private String celular;
     private String correo;

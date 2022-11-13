@@ -26,4 +26,5 @@ public class ProductoModel {
     private LocalDate fIngreso;
     private ProveedoresModel proveedor;
     private ArrayList<String> disponibles;
+    private String referencia;
 }
