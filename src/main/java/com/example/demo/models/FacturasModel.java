@@ -22,6 +22,6 @@ public class FacturasModel {
     private ClientesModel id_cliente;
     private LocalDate fecha;
     private ArrayList<ProductoModel> producto;
-    private int cantidad;
+    private ArrayList<Double> cantidad;
     private FacturadorModel facturador; 
 }
