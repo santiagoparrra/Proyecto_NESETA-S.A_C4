@@ -32,7 +32,7 @@ public class FacturaController {
     }
 
     @PostMapping()
-    public FacturasModel saveFactura(@RequestBody FacturasModel factura){
+    public String saveFactura(@RequestBody FacturasModel factura){
         return facturaService.saveFactura(factura);
     }
 

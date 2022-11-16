@@ -29,9 +29,20 @@ public class ProductoService {
         return listaProductos;
     }
 
-    public ProductoModel saveProducto(ProductoModel producto) {
-          return productoRepository.save(producto);
-    }
+    public String saveProducto(ProductoModel producto) {
+
+        /* producto.setNombre(producto.getNombre().toLowerCase());
+        producto.setMarca(producto.getMarca().toLowerCase()); */
+
+        String actualizado = "registrado";
+        if(producto.getId()!=null){
+            if(productoRepository.existsById(producto.getId())){
+                actualizado = "actualizado";
+            }
+        }
+            productoRepository.save(producto);
+            return actualizado;
+        }
 
     public String deleteProductoById(String id) {
         if (productoRepository.existsById(id)) {

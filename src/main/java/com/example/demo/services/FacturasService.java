@@ -25,8 +25,15 @@ public class FacturasService {
         return listaFacturas;
     }
 
-    public FacturasModel saveFactura(FacturasModel factura) {
-          return facturasRepository.save(factura);
+    public String saveFactura(FacturasModel factura) {
+        String actualizado = "registrada";
+        if(factura.getId()!=null){
+            if(facturasRepository.existsById(factura.getId())){
+                actualizado = "actualizada";
+            }
+        }
+            facturasRepository.save(factura);
+            return actualizado;
     }
 
     public String deleteFacturaById(String id) {

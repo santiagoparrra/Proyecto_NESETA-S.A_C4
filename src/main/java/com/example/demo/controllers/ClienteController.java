@@ -33,7 +33,7 @@ public class ClienteController {
     }
 
     @PostMapping()
-    public ClientesModel saveCliente(@RequestBody ClientesModel cliente){
+    public String saveCliente(@RequestBody ClientesModel cliente){
         return clienteService.saveCliente(cliente);
     }
 

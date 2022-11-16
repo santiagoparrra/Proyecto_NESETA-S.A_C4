@@ -19,9 +19,9 @@ import lombok.Setter;
 public class FacturasModel {
     @Id
     private String id;
-    private ClientesModel id_cliente;
+    private String id_cliente;
     private LocalDate fecha;
-    private ArrayList<ProductoModel> producto;
+    private ArrayList<String> producto;
     private ArrayList<Double> cantidad;
-    private FacturadorModel facturador; 
+    private String facturador; 
 }

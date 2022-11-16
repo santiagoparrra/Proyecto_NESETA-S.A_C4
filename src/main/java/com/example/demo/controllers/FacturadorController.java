@@ -31,7 +31,7 @@ public class FacturadorController {
     }
 
     @PostMapping()
-    public FacturadorModel saveFacturador(@RequestBody FacturadorModel facturador){
+    public String saveFacturador(@RequestBody FacturadorModel facturador){
         return facturadorService.saveFacturador(facturador);
     }
 

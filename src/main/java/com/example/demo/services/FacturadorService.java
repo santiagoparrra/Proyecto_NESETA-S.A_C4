@@ -25,7 +25,14 @@ public class FacturadorService {
         return listaFacturadores;
     }
 
-    public FacturadorModel saveFacturador(FacturadorModel facturador) {
-          return facturadorRepository.save(facturador);
+    public String saveFacturador(FacturadorModel facturador) {
+        String actualizado = "registrado";
+        if(facturador.getId()!=null){
+            if(facturadorRepository.existsById(facturador.getId())){
+                actualizado = "actualizado";
+            }
+        }
+            facturadorRepository.save(facturador);
+            return actualizado;
     }
 }

@@ -25,8 +25,15 @@ public class ClientesService {
         return listaClientes;
     }
 
-    public ClientesModel saveCliente(ClientesModel cliente) {
-          return clientesRepository.save(cliente);
+    public String saveCliente(ClientesModel cliente) {
+        String actualizado = "registrado";
+        if(cliente.getId()!=null){
+            if(clientesRepository.existsById(cliente.getId())){
+                actualizado = "actualizado";
+            }
+        }
+            clientesRepository.save(cliente);
+            return actualizado;
     }
 
     public String deleteClienteById(String id) {
