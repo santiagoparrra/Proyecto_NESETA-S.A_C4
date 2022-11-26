@@ -24,7 +24,7 @@ public class ProductoModel {
     private String marca;
     private String color;
     private LocalDate fIngreso;
-    private ProveedoresModel proveedor;
+    private String proveedor;
     private ArrayList<String> disponibles;
     private String referencia;
 	private String iva;
@@ -64,10 +64,10 @@ public class ProductoModel {
 	public void setfIngreso(LocalDate fIngreso) {
 		this.fIngreso = fIngreso;
 	}
-	public ProveedoresModel getProveedor() {
+	public String getProveedor() {
 		return proveedor;
 	}
-	public void setProveedor(ProveedoresModel proveedor) {
+	public void setProveedor(String proveedor) {
 		this.proveedor = proveedor;
 	}
 	public ArrayList<String> getDisponibles() {
