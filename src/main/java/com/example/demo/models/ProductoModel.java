@@ -27,6 +27,7 @@ public class ProductoModel {
     private ProveedoresModel proveedor;
     private ArrayList<String> disponibles;
     private String referencia;
+	private String iva;
 	public String getId() {
 		return id;
 	}

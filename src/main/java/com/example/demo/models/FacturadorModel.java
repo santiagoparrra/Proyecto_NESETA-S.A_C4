@@ -19,6 +19,7 @@ public class FacturadorModel {
     private String correo;
     private String usuario;
     private String contraseña;
+	private String rol;
     private String estado; //habilitado o deshabilitado 
 	public String getId() {
 		return id;

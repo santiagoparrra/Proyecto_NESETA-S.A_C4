@@ -17,8 +17,10 @@ public class ClientesModel {
     @Id
     private String id;
     private String nombre;
+	private String nit;
     private String celular;
     private String correo;
+	private String direccion;
 	public String getId() {
 		return id;
 	}
