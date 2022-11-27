@@ -7,6 +7,7 @@ import { BlogPage } from '../paginas/BlogPage';
 import { NotFound } from '../paginas/NotFound';
 import { TablaProductos } from '../componentes/TablaProductos';
 import { Clientes } from '../paginas/Clientes';
+import { Facturadores } from '../paginas/Facturadores';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/blog' element={<BlogPage></BlogPage>}></Route>
         <Route path='/productos' element={<TablaProductos></TablaProductos>}></Route>
         <Route path='/clientes' element={<Clientes></Clientes>}></Route>
+        <Route path='/facturadores' element={<Facturadores></Facturadores>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </HashRouter>

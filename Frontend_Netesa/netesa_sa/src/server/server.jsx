@@ -8,3 +8,8 @@ export async function loadClientes(){
     const data = await res.json();
     return data;
 }
+export async function loadFacturador(){
+    const res = await fetch ("http://localhost:8080/facturador");
+    const data = await res.json();
+    return data;
+}

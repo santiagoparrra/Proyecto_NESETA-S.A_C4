@@ -21,5 +21,4 @@ public class ClientesModel {
     private String celular;
     private String correo;
 	private String direccion;
-    
 }

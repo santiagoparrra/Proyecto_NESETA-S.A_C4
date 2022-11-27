@@ -21,6 +21,9 @@ function NavBar() {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/clientes">Clientes</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/facturadores">Gst. Facturadores</NavLink>
+                    </li>
                     
                 </ul>
             </div>
